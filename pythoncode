@@ -1,0 +1,34 @@
+
+'''
+this program should first accept an input of two fractions from the user
+
+EG. 1/2 + 1/3
+
+it should find the least common multiple of the denominator,
+
+then convert the fractions to fractions with common denominators,
+
+finally, it should carry out the specific arithmetic specified by the user and print the answer
+'''
+
+from fractions import Fraction
+
+# these variables are what the user will enter as fractions
+
+fraction1 = Fraction(input("First fraction: "))
+op = input("Enter Operator: ")
+fraction2 = Fraction(input("Second fraction: "))
+
+# these are the conditions of the operator input
+
+if op == "+":
+    print(fraction1 + fraction2)
+elif op == "-":
+    print(fraction1 - fraction2)
+elif op == "/":
+    print(fraction1 / fraction2)
+elif op == "*":
+    print(fraction1 * fraction2)
+else:
+    print("invalid operator, please choose +,-,/,or *")
+
